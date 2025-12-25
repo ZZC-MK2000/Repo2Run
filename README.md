@@ -8,6 +8,8 @@
   <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg"></a>
 </p>
 
+English | [简体中文](README_zh.md)
+
 ## 🚀 News
 Our paper: "Repo2Run: Automated Building Executable Environment for Code Repository at Scale" has been accepted by **NeurIPS 2025** main track as a **spotlight**!
 
