@@ -125,7 +125,7 @@ python build_agent/main.py --full_name "Benexl/FastAnime" --sha "677f4690fab4651
 答：这个错误来自 `agents/configuration.py`，它检查 LLM 的回复是否包含用三个反引号 ``` 包装的命令结构。实际上，我们在提示中明确指定了所需的输出格式；至少在我们的测试中，GPT-4o 和 Claude-3.5-Sonnet 没有出现这个问题。如果你遇到这个问题，我们建议首先检查 LLM 的原始输出（例如 `track.json` 或 `track.txt`）。
 
 ### 3. 容器内的 Docker 下载速度太慢，如何设置代理
-答：你可以修改位于 `utils/sandox.py` 中 `Sandbox` 类的 `generate_dockerfile` 函数。它管理初始 Dockerfile 的生成。你可以添加类似 `ENV http_proxy=XXX` 的语句来配置网络代理。
+答：你可以修改位于 `utils/sandbox.py` 中 `Sandbox` 类的 `generate_dockerfile` 函数。它管理初始 Dockerfile 的生成。你可以添加类似 `ENV http_proxy=XXX` 的语句来配置网络代理。
 
 ## 🔧 未来改进计划
 （我们会在时间允许的情况下进行这些工作；非常欢迎 PR）

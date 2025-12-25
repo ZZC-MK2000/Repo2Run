@@ -121,7 +121,7 @@ A: I recommend first running our suggested example to verify that your workflow 
 ### 2. The program runs, but the model keeps throwing errors like: “ERROR! Your reply does not contain valid block or final answer”
 A: This error originates from `agents/configuration.py`, which checks whether the LLM’s reply contains a command structure wrapped in triple backticks ```. In practice, we’ve clearly specified the required output format in the prompt; at least in our tests, GPT-4o and Claude-3.5-Sonnet did not exhibit this issue. If you encounter it, we suggest first inspecting the LLM’s raw output (e.g., `track.json` or `track.txt`).
 ### 3. Docker download speed inside the container is too slow, and how to set a proxy
-A: You can modify the `generate_dockerfile` function in the `Sandbox` class located at `utils/sandox.py`. It manages the generation of the initial Dockerfile. You can add statements like `ENV http_proxy=XXX` to configure the network proxy.
+A: You can modify the `generate_dockerfile` function in the `Sandbox` class located at `utils/sandbox.py`. It manages the generation of the initial Dockerfile. You can add statements like `ENV http_proxy=XXX` to configure the network proxy.
 
 ## 🔧 Proposed future improvements
 (we’ll work on these when time permits; PRs are very welcome)
